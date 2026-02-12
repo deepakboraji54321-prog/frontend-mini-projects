@@ -1,95 +1,151 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
 }
 
-.container {
+header .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Main section styles */
+main {
     display: flex;
-    max-width: 1200px;
-    width: 100%;
-    height: 80vh;
-    background-color: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-.form-section {
-    width: 50%;
-    padding: 30px;
+/* Right section styles */
+.right-section {
+    flex: 2;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-section h2 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Form styles */
+.right-section form {
     display: flex;
     flex-direction: column;
 }
 
-h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-label {
+.right-section label {
+    margin-bottom: 8px;
+    font-weight: bold;
     font-size: 16px;
-    margin-bottom: 5px;
-    color: #333;
 }
 
-input, select, textarea {
+.right-section input,
+.right-section select {
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
+    font-size: 16px;
+    background-color: #fff;
 }
 
-textarea {
-    height: 100px;
+.right-section input[type="text"]:focus,
+.right-section select:focus {
+    border-color: #4caf50;
+    outline: none;
 }
 
 button {
     padding: 12px 20px;
-    background-color: #d9534f;
+    background-color: #333;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #c9302c;
+    background-color: #555;
 }
 
-.image-section {
-    width: 50%;
+/* Extra Info fields (visible only when applicable) */
+#extraInfo {
+    margin-top: 15px;
+}
+
+#topic, #reason {
+    display: none;
+}
+
+/* About Section Styles */
+.about-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.image-section img {
-    width: 100%;
+.about-content {
+    flex: 1;
+}
+
+.about-section h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 16px;
+    color: #555;
+}
+
+.about-image {
+    max-width: 300px;
     height: auto;
-    object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
 }
 
-.logo img {
-    width: 80px;
-    height: auto;
+footer p {
+    margin: 0;
+    font-size: 14px;
 }

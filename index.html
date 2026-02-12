@@ -3,52 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Donation</title>
+    <title>Attendance Sheet</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
-        <!-- Left side: Form -->
-        <div class="form-section">
-            <h2>Blood Donation Form</h2>
-            <form id="donation-form">
-                <label for="name">Full Name:</label>
+    <header>
+        <div class="header-content">
+            <img src="present.png" alt="Website Logo" class="logo">
+            <h1>Attendance Sheet</h1>
+        </div>
+    </header>
+    
+    <main>
+        <div class="right-section">
+            <h2>Attendance Form</h2>
+            <form id="attendanceForm">
+                <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required>
+                <label for="code">Code/Roll Number:</label>
+                <input type="text" id="code" name="code" pattern=".{10}" required placeholder="Enter 10 digit code">
 
-                <label for="blood-group">Blood Group:</label>
-                <select id="blood-group" name="blood-group" required>
-                    <option value="A+">A+</option>
-                    <option value="A-">A-</option>
-                    <option value="B+">B+</option>
-                    <option value="B-">B-</option>
-                    <option value="O+">O+</option>
-                    <option value="O-">O-</option>
-                    <option value="AB+">AB+</option>
-                    <option value="AB-">AB-</option>
+                <label for="attendance">Are you present?</label>
+                <select id="attendance" name="attendance" required>
+                    <option value="">Select...</option>
+                    <option value="present">Present</option>
+                    <option value="absent">Absent</option>
                 </select>
 
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                <div id="extraInfo" style="display: none;">
+                    <label for="topic">Today's Topic (if Present):</label>
+                    <input type="text" id="topic" name="topic">
 
-                <label for="disease">Do you have any diseases?</label>
-                <textarea id="disease" name="disease"></textarea>
+                    <label for="reason">Reason for Absence (if Absent):</label>
+                    <input type="text" id="reason" name="reason">
+                </div>
 
-                <button type="submit">Donate</button>
+                <button type="submit">Submit</button>
             </form>
         </div>
+    </main>
 
-        <!-- Right side: Image and Logo -->
-        <div class="image-section">
-            <img src="BL D D NATI N.png" alt="Blood Donation">
-            <div class="logo">
-                <img src="BL D D NATI N.png" alt="Logo">
-            </div>
+    <!-- About Section -->
+    <div class="about-section">
+        <div class="about-content">
+            <h2>About This Website</h2>
+            <p>This website helps track attendance of users. Simply fill out the form to mark your attendance for the day.</p>
         </div>
+        <img src="present.png" alt="About Website" class="about-image">
     </div>
+
+    <footer>
+        <p>&copy; 2025 Attendance Sheet</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
